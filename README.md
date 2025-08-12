@@ -1,5 +1,5 @@
 # Natural-Language-Processing
-Project Natural Language Processing
+## Project Natural Language Processing ModernBERT Fine-tune IMDB 
 
 IMDB Training dataset : https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 
@@ -33,12 +33,12 @@ This repository contains the setup procedures for the NLU Task, and NLG_QA follo
 ```
 conda create -n NLU python=3.7
 conda activate NLU
-
 ```
 
 ## Install Pytorch
-` pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html `
-
+```
+pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html `
+```
 ## Install the pre-requisites (NLU)
 Install dependencies:
 ```
@@ -49,7 +49,6 @@ Install transformers: (here we fork NLU examples from microsoft/LoRA and build o
 
 ```
 pip install -e .
-
 ```
 Install the updated loralib:
 
@@ -57,7 +56,7 @@ Install the updated loralib:
 pip install -e ../loralib/
 ```
 
-# Example Usage
+## Example Usage
 Check the folder NLU for more details about reproducing the GLUE results. An example of adapting DeBERTaV3-base on RTE:
 
 ```
@@ -88,7 +87,7 @@ examples/text-classification/run_glue.py \
 --overwrite_output_dir
 ```
 
-# Hyperparameter Setup
+## Hyperparameter Setup
  - apply_lora: Apply LoRA to the target model.
  - apply_elalora: Further apply ElaLoRA for the model that have been modified by LoRA.
  - lora_module: The types of modules updated by LoRA.
