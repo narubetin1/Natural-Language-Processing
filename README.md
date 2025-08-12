@@ -29,8 +29,8 @@ There are several directories in this repo:
 This repository contains the setup procedures for the NLU Task, and NLG_QA follows the same procedure. For detailed instructions regarding IMAGE_CLASS/, please refer to the README files located in IMAGE_CLASS folders.
 
 Create and activate the conda env
-'''
-conda create -n NLU python=3.7
+
+`conda create -n NLU python=3.7`
 conda activate NLU 
 Install Pytorch
 pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
