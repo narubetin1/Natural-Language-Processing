@@ -9,18 +9,23 @@ Reference papar ElaLora method : https://arxiv.org/abs/2504.00254
 
 Reference papar Lora method : https://arxiv.org/abs/2106.09685
 
-ElaLoRA :
+#ElaLoRA :
 This is the implementation of ElaLoRA: Elastic & Learnable Low-Rank Adaptation for Efficient Model Fine-Tuning.
 
-Repository Overview
+#Repository Overview
 There are several directories in this repo:
 
-loralib/ contains the source code of the updated package loralib, which include our implementation of ElaLoRA (loralib/elalora.py) and needs to be installed to run the examples;
-NLU/ contains the implementation of ElaLoRA in DeBERTaV3-base, which produces the results on the GLUE benchmark;
-NLU/src/transformers/trainer.py contains the trainer to update ranks for ElaLoRA algorithm;
-NLG_QA/ contains the implementation of ElaLoRA in BART-base, which produces the results on the XSum benchmark;
-IMAGE_CLASS/ contains the implementation of ElaLoRA in ViT-B/16, which produces the results on the VTAB benchmark.
-Setup Environment (NLU)
+- loralib/ contains the source code of the updated package loralib, which include our implementation of ElaLoRA (loralib/elalora.py) and needs to be installed to run the examples;
+  
+- NLU/ contains the implementation of ElaLoRA in DeBERTaV3-base, which produces the results on the GLUE benchmark;
+  
+- NLU/src/transformers/trainer.py contains the trainer to update ranks for ElaLoRA algorithm;
+  
+- NLG_QA/ contains the implementation of ElaLoRA in BART-base, which produces the results on the XSum benchmark;
+  
+- IMAGE_CLASS/ contains the implementation of ElaLoRA in ViT-B/16, which produces the results on the VTAB benchmark.
+  
+#Setup Environment (NLU)
 This repository contains the setup procedures for the NLU Task, and NLG_QA follows the same procedure. For detailed instructions regarding IMAGE_CLASS/, please refer to the README files located in IMAGE_CLASS folders.
 
 Create and activate the conda env
