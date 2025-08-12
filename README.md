@@ -32,7 +32,8 @@ This repository contains the setup procedures for the NLU Task, and NLG_QA follo
 
 ```
 conda create -n NLU python=3.7
-conda activate NLU 
+conda activate NLU
+
 ```
 
 ## Install Pytorch
@@ -40,18 +41,21 @@ conda activate NLU
 
 ## Install the pre-requisites (NLU)
 Install dependencies:
-'''
 ```
 cd NLU
 pip install -r requirements.txt
 ```
 Install transformers: (here we fork NLU examples from microsoft/LoRA and build our examples based on their transformers version, which is v4.4.2.)
 
-` pip install -e . `
+```
+pip install -e .
 
+```
 Install the updated loralib:
 
-` pip install -e ../loralib/ `
+```
+pip install -e ../loralib/
+```
 
 # Example Usage
 Check the folder NLU for more details about reproducing the GLUE results. An example of adapting DeBERTaV3-base on RTE:
@@ -85,18 +89,18 @@ examples/text-classification/run_glue.py \
 ```
 
 # Hyperparameter Setup
-  apply_lora: Apply LoRA to the target model.
-  apply_elalora: Further apply ElaLoRA for the model that have been modified by LoRA.
-  lora_module: The types of modules updated by LoRA.
-  lora_r: The initial rank of each incremental matrix.
-  b: Number of total ranks pruned/added for each round.
-  k: Max rank pruned/added for each matrix in each round.
-  init_warmup: The steps of initial warmup for budget scheduler.
-  final_warmup: The steps of final warmup for budget scheduler.
-  mask_interval: The time interval between two budget allocations.
-  enable_scheduler: If enabled, total number of rank change (b) will decrease with time.
-  beta1 and beta2: The coefficient of exponentional moving average when updating importance scores.
-  reg_orth_coef: The weight of orthongonal regularization.
+ - apply_lora: Apply LoRA to the target model.
+ - apply_elalora: Further apply ElaLoRA for the model that have been modified by LoRA.
+ - lora_module: The types of modules updated by LoRA.
+ - lora_r: The initial rank of each incremental matrix.
+ - b: Number of total ranks pruned/added for each round.
+ - k: Max rank pruned/added for each matrix in each round.
+ - init_warmup: The steps of initial warmup for budget scheduler.
+ - final_warmup: The steps of final warmup for budget scheduler.
+ - mask_interval: The time interval between two budget allocations.
+ - enable_scheduler: If enabled, total number of rank change (b) will decrease with time.
+ - beta1 and beta2: The coefficient of exponentional moving average when updating importance scores.
+ - reg_orth_coef: The weight of orthongonal regularization.
 
 
 
