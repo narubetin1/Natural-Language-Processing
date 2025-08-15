@@ -1,5 +1,7 @@
 # Natural-Language-Processing
 ## Project Natural Language Processing ModernBERT Fine-tune IMDB 
+<img width="436" height="265" alt="image" src="https://github.com/user-attachments/assets/e5783e4c-5f9a-4307-bea2-185554c05c5c" />
+
 
 IMDB Training dataset : https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 
